@@ -2,24 +2,21 @@
  * Solve the FizzBuzz challenge.
  */
 class FizzBuzz {
-
     public static void main(String[] args) {
 
         int i = 1;
         while(i < 100){
-
-            i = getI(i);
+            // Find out which numbers divide i.
+            i = doFizzBuzz(i);
         }
     }
 
-    private static int getI(int i) {
-        // Find out which numbers divide i.
+    public static int doFizzBuzz(int i) {
         boolean divisibleBy3 = i % 3 == 0;
         boolean divisibleBy5 = i % 5 == 0;
 
         // Print our appropriate result.
         if (divisibleBy3 && divisibleBy5) {
-
             System.out.println("Fizz Buzz");
 
         } else if (divisibleBy3) {
